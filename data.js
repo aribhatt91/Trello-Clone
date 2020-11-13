@@ -1,14 +1,14 @@
 window.tasks = {
 	"data": [
 		{
-			"status": "3",
-			"title": "Create a Trello clone",
+			"status": "5",
+			"title": "Setup project to build a Trello clone",
 			"assignee": "Aritra",
 			"due_date": "16-11-2020",
-			"priority": "normal"
+			"priority": "high"
 		},
 		{
-			"status": "3",
+			"status": "4",
 			"title": "Learn Drag and Drop in HTML",
 			"assignee": "Aritra",
 			"due_date": "16-11-2020",
@@ -16,28 +16,28 @@ window.tasks = {
 		},
 		{
 			"status": "1",
-			"title": "Add sort function to Trello",
-			"assignee": "",
+			"title": "Add sort function to Taskboard",
+			"assignee": "Aritra",
 			"due_date": "16-11-2020",
-			"priority": "normal"
+			"priority": "low"
 		},
 		{
-			"status": "1",
+			"status": "3",
 			"title": "Create new cards",
-			"assignee": "",
+			"assignee": "Aritra",
 			"due_date": "16-11-2020",
 			"priority": "normal"
 		},
 		{
 			"status": "1",
-			"title": "Edit and delete new cards",
-			"assignee": "",
+			"title": "Edit and delete cards",
+			"assignee": "Aritra",
 			"due_date": "16-11-2020",
 			"priority": "normal"
 		},
 		{
 			"status": "2",
-			"title": "Use Redux for state management",
+			"title": "Explore Redux for state management",
 			"assignee": "Aritra",
 			"due_date": "16-11-2020",
 			"priority": "low"
@@ -54,6 +54,27 @@ window.tasks = {
 			"title": "Init git repo",
 			"assignee": "Aritra",
 			"due_date": "06-11-2020",
+			"priority": "normal"
+		},
+		{
+			"status": "1",
+			"title": "Get a Vanilla Js datepicker",
+			"assignee": "Aritra",
+			"due_date": "17-11-2020",
+			"priority": "normal"
+		},
+		{
+			"status": "1",
+			"title": "Work on responsiveness",
+			"assignee": "Aritra",
+			"due_date": "16-11-2020",
+			"priority": "normal"
+		},
+		{
+			"status": "1",
+			"title": "Store data in local storage",
+			"assignee": "Aritra",
+			"due_date": "17-11-2020",
 			"priority": "normal"
 		}
 	]

@@ -1,4 +1,4 @@
-var cards = document.querySelectorAll('.card'),
+var btn = document.getElementById('createTask'),
 slots = document.querySelectorAll('.slot');
 
 
@@ -31,6 +31,11 @@ slots.forEach( slot => {
 		const afterElement = getAfterDragElement(this, e.clientY);
 		this.appendChild(card);
 	})
+});
+
+btn.addEventListener('click', function(e){
+	e.preventDefault();
+	createTaskForm();
 })
 
 function getAfterDragElement(container, y) {

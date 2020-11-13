@@ -4,6 +4,8 @@
 		<title>Taskboard</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+		<script src="https://cdn.jsdelivr.net/npm/flatpickr" defer></script>
 		<script type="text/javascript" src="data.js" defer></script>
 		<script type="text/javascript" src="./js/main.js" defer></script>
 		<script type="text/javascript" src="./js/task.js" defer></script>
@@ -11,9 +13,14 @@
 	<body>
 		<!-- Create a Trello clone in Vanilla JS -->
 		<header class="header">
-			<nav class="logo">
-				
-			</nav>
+			<div class="flex">
+				<nav class="logo">
+					TaskBoard
+				</nav>
+				<div class="button-container">
+					<button id="createTask" class="button" type="button"><span class="btn-icon">+</span><span class="btn-text">Create new task</span></button>
+				</div>
+			</div>
 		</header>
 		<main>
 			<div class="flex-container">
@@ -21,20 +28,6 @@
 					<div class="title">
 						To Do
 					</div>
-<!-- 					<div class="card" draggable="true">
-						<div class="card-img"></div>
-						<div>
-							<span class="priority-bar" priority="normal"></span>
-						</div>
-						<div class="title"></div>
-						<div class="actions">
-							<div class="icons">
-								
-							</div>
-							<div class="assignee"></div>
-						</div>
-						
-					</div> -->
 				</div>
 				<div class="slot">
 					<div class="title">
@@ -76,6 +69,53 @@
 					<span class="assignee"></span>
 				</div>
 			</div>	
+		</template>
+		<template id="modal-template">
+			<div class="modal-wrapper">
+				<div class="modal-title">Create new task</div>
+				<div class="task-form-wrapper">
+					<form class="task-form" action="javascript:void(0)">
+						<div class="input-group">
+							<label for="title">Title *</label>
+							<input type="text" id="title" name="title" />
+						</div>
+						<div class="input-group half">
+							<label for="date">Due date *</label>
+							<input type="text" id="date" name="date" />
+						</div>
+						<div class="input-group half">
+							<label for="priority">Priority<sup>*</sup></label>
+							<select id="date" name="date">
+								<option value="normal" selected>Normal</option>
+								<option value="low">Low</option>
+								<option value="high">High</option>
+								<option value="critical">Critical</option>
+							</select>
+						</div>
+
+						<div class="input-group half">
+							<label for="assignee">Assignee *</label>
+							<select id="assignee" name="assignee">
+								<option value="">None</option>
+							</select>
+						</div>
+
+						<div class="input-group half">
+							<label for="status">Priority *</label>
+							<select id="status" name="status">
+								<option value="1" selected>To Do</option>
+								<option value="2">Research</option>
+								<option value="3">In Progress</option>
+								<option value="4">Review</option>
+							</select>
+						</div>
+						<div class="button-group">
+							<button class="button grey" id="cancel" type="button">Cancel</button>
+							<button id="submit" class="button" type="button">Create</button>
+						</div>
+					</form>
+				</div>
+			</div> 
 		</template>
 
 	</body>

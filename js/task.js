@@ -35,11 +35,49 @@ updatePosition = function(card, position) {
 		item.status = position;
 	}
 },
-editTask = function() {
+editTask = function(task) {
 
 },
 deleteTask = function() {
 
+},
+createTaskForm = function(){
+	var modal;
+	if(!document.getElementById('taskForm')){
+		modal = document.createElement('div');
+		modal.className = 'modal-bg';
+		modal.id = 'taskForm';
+		modal.innerHTML = document.getElementById('modal-template').innerHTML;
+		modal.querySelector('#cancel').onclick = closeForm;
+		document.body.appendChild(modal);
+	}
+	document.getElementById('title').value = '';
+	openForm();
+},
+openForm = function() {
+	console.log('open modal');
+	if(!document.getElementById('taskForm')){
+		return;
+	}
+	document.getElementById('taskForm').style.display = 'flex';
+	setTimeout(function() {
+		document.body.setAttribute('modal-open', true);
+	}, 300);
+},
+closeForm = function() {
+	if(!document.getElementById('taskForm')){
+		return;
+	}
+	document.body.removeAttribute('modal-open');
+	setTimeout(function() {
+		document.getElementById('taskForm').style.display = 'none';
+	}, 300);
+},
+validateForm = function() {
+
+},
+submitForm = function(edit) {
+	
 }
 
 if(document.readyState === 'complete'){
