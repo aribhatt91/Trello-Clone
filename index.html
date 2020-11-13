@@ -1,25 +1,82 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title></title>
+		<title>Taskboard</title>
 		<link rel="stylesheet" type="text/css" href="style.css">
-		<script type="text/javascript" src="main.js" defer></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<script type="text/javascript" src="data.js" defer></script>
+		<script type="text/javascript" src="./js/main.js" defer></script>
+		<script type="text/javascript" src="./js/task.js" defer></script>
 	</head>
 	<body>
 		<!-- Create a Trello clone in Vanilla JS -->
-		<header></header>
+		<header class="header">
+			<nav class="logo">
+				
+			</nav>
+		</header>
 		<main>
 			<div class="flex-container">
 				<div class="slot">
-					<div class="card" draggable="true"></div>
+					<div class="title">
+						To Do
+					</div>
+<!-- 					<div class="card" draggable="true">
+						<div class="card-img"></div>
+						<div>
+							<span class="priority-bar" priority="normal"></span>
+						</div>
+						<div class="title"></div>
+						<div class="actions">
+							<div class="icons">
+								
+							</div>
+							<div class="assignee"></div>
+						</div>
+						
+					</div> -->
 				</div>
-				<div class="slot"></div>
-				<div class="slot"></div>
-				<div class="slot"></div>
-				<div class="slot"></div>
+				<div class="slot">
+					<div class="title">
+						Research
+					</div>
+				</div>
+				<div class="slot">
+					<div class="title">
+						In Progress
+					</div>
+				</div>
+				<div class="slot">
+					<div class="title">
+						Review
+					</div>
+				</div>
+				<div class="slot">
+					<div class="title">
+						Completed
+					</div>
+				</div>
 			</div>
 		</main>
 		<footer></footer>
+		<template id="card-template">
+			<div class="card-img"></div>
+			<div>
+				<span class="priority-bar"></span>
+			</div>
+			<div class="card-title"></div>
+			<div class="date-container">
+				<i class="material-icons">schedule</i>
+				<span class="due-date"></span>
+			</div>
+			<div class="actions">
+				<div class="icons">
+				</div>
+				<div class="assignees">
+					<span class="assignee"></span>
+				</div>
+			</div>	
+		</template>
 
 	</body>
 </html>
